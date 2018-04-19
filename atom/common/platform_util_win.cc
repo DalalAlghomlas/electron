@@ -206,7 +206,7 @@ namespace platform_util {
 
 bool ShowItemInFolder(const base::FilePath& full_path) {
   base::win::ScopedCOMInitializer com_initializer;
-  if (!com_initializer.succeeded())
+  if (!com_initializer.Succeeded())
     return false;
 
   base::FilePath dir = full_path.DirName().AsEndingWithSeparator();
@@ -325,7 +325,7 @@ void OpenExternal(const base::string16& url, bool activate,
 
 bool MoveItemToTrash(const base::FilePath& path) {
   base::win::ScopedCOMInitializer com_initializer;
-  if (!com_initializer.succeeded())
+  if (!com_initializer.Succeeded())
     return false;
 
   Microsoft::WRL::ComPtr<IFileOperation> pfo;
