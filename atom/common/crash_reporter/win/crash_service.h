@@ -13,7 +13,7 @@
 
 #if defined(OS_WIN)
 #include <windows.h>
-#endif //OS_WIN
+#endif  // defined(OS_WIN)
 
 namespace google_breakpad {
 
